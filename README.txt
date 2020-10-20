@@ -1,7 +1,7 @@
 There are some tips about the use of the Sorting Algorithm App:
 
--Make sure you have the runtime of .NET Core installed on your PC at least in the version 3.0;
-	Link for download: https://dotnet.microsoft.com/download/dotnet-core/3.0
+-Make sure you have the runtime of .NET Core installed on your PC at least in the version 3.1;
+	Link for download: https://dotnet.microsoft.com/download/dotnet-core/3.1
 
 -Just use json files (could be a .txt file too but in a struct of json);
 	-Follow the model from the class Image.cs, but basically can be:
