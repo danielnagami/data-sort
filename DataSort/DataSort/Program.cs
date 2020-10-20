@@ -58,14 +58,36 @@ namespace DataSort
 
             selectedItem.Execute(array, 0, array.Length - 1);
 
-            foreach (var item in array)
-            {
-                Console.WriteLine(item);
-            }
+            if (!(selectedItem is IMenuOption))
+                AscendingOrDescending(array);
 
             Console.WriteLine();
             Console.WriteLine("Tap something to continue...");
             return selectedItem;
+        }
+
+        private static void AscendingOrDescending(int[] array)
+        {
+            Console.WriteLine("Do you want to print it by ascending or descending?\nDigit 1 for ascending and 2 for descending");
+            string orderBy = Console.ReadLine();
+            switch (orderBy)
+            {
+                case "1":
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        Console.WriteLine(array[i]);
+                    };
+                    break;
+                case "2":
+                    for (int i = array.Length - 1; i >= 0; i--)
+                    {
+                        Console.WriteLine(array[i]);
+                    };
+                    break;
+                default:
+                    AscendingOrDescending(array);
+                    break;
+            }
         }
 
         private static void PrintMenuItems(IList<MenuItem> menuItems)

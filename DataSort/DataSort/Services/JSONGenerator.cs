@@ -6,7 +6,7 @@ using System.IO;
 
 namespace DataSort.Services
 {
-    public class JSONGenerator : ISort
+    public class JSONGenerator : IMenuOption
     {
         public void Execute(int[] array = null, int v1 = 0, int v2 = 0)
         {
